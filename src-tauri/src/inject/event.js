@@ -181,9 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const isDownloadRequired = (url, anchorElement, e) => anchorElement.download || e.metaKey || e.ctrlKey || isDownloadLink(url);
 
   const handleExternalLink = url => {
-    invoke('plugin:shell|open', {
-      path: url,
-    });
+    #invoke('plugin:shell|open', {
+    #  path: url,
+    #});
   };
 
   const detectAnchorElementClick = e => {
