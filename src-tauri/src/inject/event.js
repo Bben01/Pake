@@ -181,9 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const isDownloadRequired = (url, anchorElement, e) => anchorElement.download || e.metaKey || e.ctrlKey || isDownloadLink(url);
 
   const handleExternalLink = url => {
-    #invoke('plugin:shell|open', {
-    #  path: url,
-    #});
+    //invoke('plugin:shell|open', {
+    //  path: url,
+    //});
   };
 
   const detectAnchorElementClick = e => {
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       handleExternalLink(hrefUrl.href);
     }
     // Call the original window.open function to maintain its normal functionality.
-    return originalWindowOpen.call(window, url, name, specs);
+    // return originalWindowOpen.call(window, url, name, specs);
   };
 
   // Set the default zoom, There are problems with Loop without using try-catch.
